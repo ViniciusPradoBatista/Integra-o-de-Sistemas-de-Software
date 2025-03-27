@@ -1,0 +1,29 @@
+curl -X GET http://127.0.0.1:5000/produtos
+
+curl -X POST http://127.0.0.1:5000/produtos \
+     -H "Content-Type: application/json" \
+     -d '{
+          "nome": "Produto X",
+          "fornecedor": "Fornecedor Y",
+          "endereco_fornecedor": "Rua Z, 123",
+          "quantidade": 20,
+          "endereco": "Rua W, 456",
+          "preco_unitario": 99.99
+     }'
+
+
+curl -X PUT http://127.0.0.1:5000/produtos/1 \
+     -H "Content-Type: application/json" \
+     -d '{
+          "nome": "Produto X Atualizado",
+          "fornecedor": "Fornecedor Z",
+          "endereco_fornecedor": "Rua Y, 999",
+          "quantidade": 30,
+          "endereco": "Rua X, 888",
+          "preco_unitario": 120.50
+     }'
+
+
+curl -X DELETE http://127.0.0.1:5000/produtos/1
+
+
